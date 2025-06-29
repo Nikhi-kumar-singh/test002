@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fire Prediction Input Form</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 30px auto;
+            border: 2px solid #333;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        td input {
+            width: 100%;
+            padding: 6px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .submit-btn {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Fire Prediction Input Form</h2>
+
+    <form action="{{ url_for('predict_data') }}" method="post">
+        <table>
+            <tr>
+                <th>Feature</th>
+                <th>Input Value</th>
+            </tr>
+            <tr>
+                <td>Temperature</td>
+                <td><input type="number" name="temperature" step="any" required></td>
+            </tr>
+            <tr>
+                <td>Relative Humidity (RH)</td>
+                <td><input type="number" name="rh" step="any" required></td>
+            </tr>
+            <tr>
+                <td>Wind Speed (WS)</td>
+                <td><input type="number" name="ws" step="any" required></td>
+            </tr>
+            <tr>
+                <td>Rain</td>
+                <td><input type="number" name="rain" step="any" required></td>
+            </tr>
+            <tr>
+                <td>FFMC</td>
+                <td><input type="number" name="ffmc" step="any" required></td>
+            </tr>
+            <tr>
+                <td>DMC</td>
+                <td><input type="number" name="dmc" step="any" required></td>
+            </tr>
+            <tr>
+                <td>DC</td>
+                <td><input type="number" name="dc" step="any" required></td>
+            </tr>
+            <tr>
+                <td>ISI</td>
+                <td><input type="number" name="isi" step="any" required></td>
+            </tr>
+            <tr>
+                <td>Classes (1 for fire, 0 for no fire)</td>
+                <td><input type="number" name="classes" min="0" max="1" required></td>
+            </tr>
+            <tr>
+                <td>Region (0 or 1)</td>
+                <td><input type="number" name="region" min="0" max="1" required></td>
+            </tr>
+        </table>
+
+        <div class="submit-btn">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+     <h2>Fire Data Table</h2>
+    <table>
+        <tr>
+            <th>Temperature</th>
+            <th>RH</th>
+            <th>WS</th>
+            <th>Rain</th>
+            <th>FFMC</th>
+            <th>DMC</th>
+            <th>DC</th>
+            <th>ISI</th>
+            <th>Classes</th>
+            <th>Region</th>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>57</td>
+            <td>18</td>
+            <td>0.0</td>
+            <td>65.7</td>
+            <td>3.4</td>
+            <td>7.6</td>
+            <td>1.3</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+    </table>
+
+</body>
+</html>
