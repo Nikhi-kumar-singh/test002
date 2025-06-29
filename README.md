@@ -28,11 +28,11 @@ This project focuses on deploying a machine learning regression model trained on
 - Classes: Fire or Not (for classification) — not used here for regression
 -region : Bejaia Region Dataset(denotes by 0) and  Sidi-Bel Abbes Region Dataset(denoted by 1)
 
-📌 Target variable: **Area** (burned area in hectares)
+📌 Target variable: FWI
 
 ---
 
 ## 🧠 Model Pipeline
 
 ```text
-[Input Features] ─▶ StandardScaler ─▶ LinearRegression ─▶ [Predicted Burned Area]
+[Input Features] ─▶ StandardScaler ─▶ LinearRegression ─▶ [Predicted FWI]
